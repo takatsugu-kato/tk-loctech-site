@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合同会社TKローカライズテック | TK LocTech LLC</title>
+    <meta name="description" content="翻訳管理システム（TMS）の設計・開発・保守、ローカライズ業務自動化基盤および機械翻訳パイプライン構築を手掛ける合同会社TKローカライズテックの公式サイトです。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-slate-900 selection:text-white"
+    x-data="{ lang: 'ja' }">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5 group">
+                <span
+                    class="inline-flex items-center justify-center w-8 h-8 rounded bg-slate-900 text-white font-bold text-sm tracking-tighter">TK</span>
+                <span class="font-bold text-slate-900 tracking-tight text-base sm:text-lg">
+                    <span x-show="lang === 'ja'">合同会社TKローカライズテック</span>
+                    <span x-show="lang === 'en'" x-cloak>TK LocTech LLC</span>
+                </span>
+            </a>
+
+            <nav class="flex items-center gap-6 text-sm font-medium text-slate-600">
+                <a href="#services" class="hover:text-slate-900 transition hidden sm:inline">
+                    <span x-show="lang === 'ja'">事業内容</span>
+                    <span x-show="lang === 'en'" x-cloak>Services</span>
+                </a>
+                <a href="#about" class="hover:text-slate-900 transition hidden sm:inline">
+                    <span x-show="lang === 'ja'">会社概要</span>
+                    <span x-show="lang === 'en'" x-cloak>Company</span>
+                </a>
+                <a href="#contact" class="hover:text-slate-900 transition hidden sm:inline">
+                    <span x-show="lang === 'ja'">お問い合わせ</span>
+                    <span x-show="lang === 'en'" x-cloak>Contact</span>
+                </a>
+
+                <!-- Language Switcher -->
+                <div class="inline-flex rounded-md border border-slate-200 p-0.5 bg-slate-100 text-xs">
+                    <button type="button" @click="lang = 'ja'"
+                        :class="lang === 'ja' ? 'bg-white text-slate-900 shadow-sm font-semibold' : 'text-slate-500 hover:text-slate-800'"
+                        class="px-2.5 py-1 rounded transition">
+                        JP
+                    </button>
+                    <button type="button" @click="lang = 'en'"
+                        :class="lang === 'en' ? 'bg-white text-slate-900 shadow-sm font-semibold' : 'text-slate-500 hover:text-slate-800'"
+                        class="px-2.5 py-1 rounded transition">
+                        EN
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6 py-20 sm:py-28">
+            <p class="text-xs font-semibold uppercase tracking-widest text-blue-700 mb-3">
+                Localization Engineering &amp; Workflow Automation
+            </p>
+            <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight leading-tight max-w-3xl">
+                <span x-show="lang === 'ja'">ローカライズ業務を、<br class="hidden sm:inline">確かなシステム技術で自動化する。</span>
+                <span x-show="lang === 'en'" x-cloak>Engineering Reliable Automation for Global Localization
+                    Workflows.</span>
+            </h1>
+            <p class="mt-6 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
+                <span x-show="lang === 'ja'">
+                    合同会社TKローカライズテックは、翻訳管理システム（TMS）の設計・開発・保守から、機械翻訳（NMT/LLM）パイプライン構築、自動品質保証（QA）ツール開発まで、多言語展開を支える技術基盤を一貫して提供します。
+                </span>
+                <span x-show="lang === 'en'" x-cloak>
+                    TK LocTech LLC designs, builds, and maintains custom Translation Management Systems (TMS), automated
+                    QA pipelines, and NMT/LLM integration workflows for enterprise localization operations.
+                </span>
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#services"
+                    class="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition">
+                    <span x-show="lang === 'ja'">事業内容を見る</span>
+                    <span x-show="lang === 'en'" x-cloak>Explore Services</span>
+                </a>
+                <a href="#contact"
+                    class="inline-flex items-center justify-center px-5 py-2.5 rounded-md border border-slate-300 bg-white text-slate-700 text-sm font-medium hover:bg-slate-50 transition">
+                    <span x-show="lang === 'ja'">お問い合わせ</span>
+                    <span x-show="lang === 'en'" x-cloak>Get in Touch</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+                    <span x-show="lang === 'ja'">事業内容</span>
+                    <span x-show="lang === 'en'" x-cloak>Services</span>
+                </h2>
+                <p class="mt-2 text-sm sm:text-base text-slate-600">
+                    <span x-show="lang === 'ja'">20年以上のローカライズエンジニアリング知見に基づき、実運用に耐える堅牢なシステムを構築・保守します。</span>
+                    <span x-show="lang === 'en'" x-cloak>Built on over 20 years of localization engineering experience
+                        to deliver maintainable, production-grade systems.</span>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg border border-slate-200 p-6 shadow-sm">
+                    <div
+                        class="w-10 h-10 rounded-md bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-sm mb-4">
+                        01</div>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span x-show="lang === 'ja'">TMS・業務管理システム開発・保守</span>
+                        <span x-show="lang === 'en'" x-cloak>Custom TMS &amp; Workflow Systems</span>
+                    </h3>
+                    <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                        <span x-show="lang === 'ja'">
+                            案件管理・工程管理・ベンダー管理を統合するカスタムWebアプリケーションの設計・開発・保守運用。既存TMS（Plunet、XTRF、Phrase等）とのAPI連携基盤も構築します。
+                        </span>
+                        <span x-show="lang === 'en'" x-cloak>
+                            Architecture, development, and ongoing maintenance of custom localization management web
+                            applications and API integrations with Plunet, XTRF, Phrase, and Smartling.
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg border border-slate-200 p-6 shadow-sm">
+                    <div
+                        class="w-10 h-10 rounded-md bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-sm mb-4">
+                        02</div>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span x-show="lang === 'ja'">自動QA・ファイル処理パイプライン構築</span>
+                        <span x-show="lang === 'en'" x-cloak>Automated QA &amp; File Processing</span>
+                    </h3>
+                    <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                        <span x-show="lang === 'ja'">
+                            多言語データ（XML、JSON、XLIFF、各種ドキュメント）の抽出・変換・検証を自動化するバッチ処理および正規表現ベースの品質チェックシステムを開発します。
+                        </span>
+                        <span x-show="lang === 'en'" x-cloak>
+                            High-throughput batch processing pipelines and automated linguistic/structural QA validation
+                            tools for XML, JSON, XLIFF, and structured localization assets.
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg border border-slate-200 p-6 shadow-sm">
+                    <div
+                        class="w-10 h-10 rounded-md bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-sm mb-4">
+                        03</div>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        <span x-show="lang === 'ja'">機械翻訳（NMT/LLM）ワークフロー統合</span>
+                        <span x-show="lang === 'en'" x-cloak>NMT &amp; LLM Pipeline Integration</span>
+                    </h3>
+                    <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                        <span x-show="lang === 'ja'">
+                            商用MTエンジンおよび大規模言語モデル（LLM）APIを翻訳工程へ安全に組み込む中継基盤の構築、前処理・後処理自動化、運用システム保守を行います。
+                        </span>
+                        <span x-show="lang === 'en'" x-cloak>
+                            Integration of commercial NMT engines and LLM APIs into production translation workflows,
+                            including pre/post-processing automation and system operations support.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Profile Section -->
+    <section id="about" class="py-20 bg-white border-t border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-8">
+                <span x-show="lang === 'ja'">会社概要</span>
+                <span x-show="lang === 'en'" x-cloak>Company Profile</span>
+            </h2>
+
+            <div class="border-t border-slate-200 divide-y divide-slate-200 text-sm sm:text-base">
+                <div class="py-4 grid sm:grid-cols-3 gap-2">
+                    <dt class="font-semibold text-slate-700">
+                        <span x-show="lang === 'ja'">商号</span>
+                        <span x-show="lang === 'en'" x-cloak>Company Name</span>
+                    </dt>
+                    <dd class="sm:col-span-2 text-slate-900">
+                        合同会社TKローカライズテック（英文表記: TK LocTech LLC）
+                    </dd>
+                </div>
+
+                <div class="py-4 grid sm:grid-cols-3 gap-2">
+                    <dt class="font-semibold text-slate-700">
+                        <span x-show="lang === 'ja'">代表者</span>
+                        <span x-show="lang === 'en'" x-cloak>Representative</span>
+                    </dt>
+                    <dd class="sm:col-span-2 text-slate-900">
+                        <span x-show="lang === 'ja'">代表社員 加藤 貴嗣</span>
+                        <span x-show="lang === 'en'" x-cloak>Takatsugu Kato, Managing Member</span>
+                    </dd>
+                </div>
+
+                <div class="py-4 grid sm:grid-cols-3 gap-2">
+                    <dt class="font-semibold text-slate-700">
+                        <span x-show="lang === 'ja'">所在地</span>
+                        <span x-show="lang === 'en'" x-cloak>Location</span>
+                    </dt>
+                    <dd class="sm:col-span-2 text-slate-900">
+                        <span x-show="lang === 'ja'">〒252-0823 神奈川県藤沢市獺郷</span>
+                        <span x-show="lang === 'en'" x-cloak>Osogo, Fujisawa, Kanagawa 252-0823, Japan</span>
+                    </dd>
+                </div>
+
+                <div class="py-4 grid sm:grid-cols-3 gap-2">
+                    <dt class="font-semibold text-slate-700">
+                        <span x-show="lang === 'ja'">設立</span>
+                        <span x-show="lang === 'en'" x-cloak>Established</span>
+                    </dt>
+                    <dd class="sm:col-span-2 text-slate-900">
+                        <span x-show="lang === 'ja'">2026年12月（予定）</span>
+                        <span x-show="lang === 'en'" x-cloak>December 2026 (Scheduled)</span>
+                    </dd>
+                </div>
+
+                <div class="py-4 grid sm:grid-cols-3 gap-2">
+                    <dt class="font-semibold text-slate-700">
+                        <span x-show="lang === 'ja'">主な事業内容</span>
+                        <span x-show="lang === 'en'" x-cloak>Business Activities</span>
+                    </dt>
+                    <dd class="sm:col-span-2 text-slate-900 leading-relaxed">
+                        <span x-show="lang === 'ja'">
+                            1. ローカライズ業務管理システム・翻訳支援ツールの企画、設計、開発、保守及び運用<br>
+                            2. 機械翻訳及び大規模言語モデルを活用した業務自動化パイプラインの構築・運用支援<br>
+                            3. 多言語データ処理・品質検証システムの受託開発及び技術支援
+                        </span>
+                        <span x-show="lang === 'en'" x-cloak>
+                            1. Design, development, maintenance, and operation of localization management and
+                            translation automation systems<br>
+                            2. Integration and operational support for NMT and LLM translation pipelines<br>
+                            3. Custom development and engineering support for multilingual data processing and QA
+                            validation tools
+                        </span>
+                    </dd>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-slate-900 rounded-xl p-8 sm:p-12 text-white">
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                    <span x-show="lang === 'ja'">お問い合わせ</span>
+                    <span x-show="lang === 'en'" x-cloak>Contact</span>
+                </h2>
+                <p class="mt-3 text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
+                    <span x-show="lang === 'ja'">
+                        システム開発・保守運用のご相談、技術支援に関するお問い合わせは下記メールアドレスまでご連絡ください。
+                    </span>
+                    <span x-show="lang === 'en'" x-cloak>
+                        For inquiries regarding custom localization system development, workflow automation, or
+                        maintenance support, please contact us via email.
+                    </span>
+                </p>
+                <div class="mt-6">
+                    <a href="mailto:takatsugu@tk-loctech.com"
+                        class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-white text-slate-900 font-semibold text-sm hover:bg-slate-100 transition">
+                        <span>takatsugu@tk-loctech.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-8">
+        <div
+            class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <p>&copy; 2026 TK LocTech LLC (合同会社TKローカライズテック). All rights reserved.</p>
+            <p>Fujisawa, Kanagawa, Japan</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
